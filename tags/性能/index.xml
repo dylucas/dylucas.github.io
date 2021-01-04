@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>性能 on 笔记记录</title>
+    <link>https://www.dylucas.com/tags/%E6%80%A7%E8%83%BD/</link>
+    <description>Recent content in 性能 on 笔记记录</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 04 Jan 2021 00:09:39 +0800</lastBuildDate><atom:link href="https://www.dylucas.com/tags/%E6%80%A7%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>平均负载</title>
+      <link>https://www.dylucas.com/post/%E5%B9%B3%E5%9D%87%E8%B4%9F%E8%BD%BD/</link>
+      <pubDate>Mon, 04 Jan 2021 00:09:39 +0800</pubDate>
+      
+      <guid>https://www.dylucas.com/post/%E5%B9%B3%E5%9D%87%E8%B4%9F%E8%BD%BD/</guid>
+      <description>怎么理解“平均负载” 平均负载是指单位时间内，处于可运行状态和不可中断状态的进程数。所以，它不仅包括了正在使用 CPU 的进程，还包括等待 CPU 和等待 I/O 的</description>
+    </item>
+    
+  </channel>
+</rss>

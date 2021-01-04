@@ -53,7 +53,7 @@
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="性能,极客," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="平均负载"/>
 <meta name="twitter:description" content="怎么理解“平均负载” 平均负载是指单位时间内，处于可运行状态和不可中断状态的进程数。所以，它不仅包括了正在使用 CPU 的进程，还包括等待 CPU 和等待 I/O 的"/>
@@ -127,7 +127,9 @@
 
       <div class="post-meta">
         <span class="post-time"> 2021-01-04 </span>
-        
+        <div class="post-category">
+            <a href="/categories/linux/"> Linux </a>
+            </div>
           <span class="more-meta"> 约 1412 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
@@ -147,8 +149,8 @@
             <li><a href="#uptime">uptime</a></li>
             <li><a href="#man-uptime">man uptime</a></li>
             <li><a href="#watch">watch</a></li>
-            <li><a href="#mpstat-查看-cpu-使用率的变化情况">mpstat 查看 CPU 使用率的变化情况</a></li>
-            <li><a href="#pidstat-查看那个进程导致了-cpu-使用率为-100">pidstat 查看那个进程导致了 CPU 使用率为 100%</a></li>
+            <li><a href="#mpstat">mpstat</a></li>
+            <li><a href="#pidstat">pidstat</a></li>
             <li><a href="#小结">小结</a></li>
           </ul>
         </li>
@@ -259,7 +261,8 @@ $ watch -d uptime
 ...,  load average: 1.00, 0.75, 0.39
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="mpstat-查看-cpu-使用率的变化情况">mpstat 查看 CPU 使用率的变化情况</h3>
+</div><h3 id="mpstat">mpstat</h3>
+<p>查看 CPU 使用率的变化情况</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -280,7 +283,8 @@ Linux 4.15.0 (ubuntu) 09/22/18 _x86_64_ (2 CPU)
 13:30:11       1  100.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="pidstat-查看那个进程导致了-cpu-使用率为-100">pidstat 查看那个进程导致了 CPU 使用率为 100%</h3>
+</div><h3 id="pidstat">pidstat</h3>
+<p>查看那个进程导致了 CPU 使用率为 100%</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -324,7 +328,10 @@ $ pidstat -u 5 1
   </p>
 </div>
 <footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/%E6%80%A7%E8%83%BD/">性能</a>
+          <a href="/tags/%E6%9E%81%E5%AE%A2/">极客</a>
+          </div>
       <nav class="post-nav">
         
         
