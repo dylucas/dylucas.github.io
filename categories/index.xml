@@ -16,5 +16,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>MySQL</title>
+      <link>https://www.dylucas.com/categories/mysql/</link>
+      <pubDate>Sat, 05 Sep 2020 00:13:09 +0800</pubDate>
+      
+      <guid>https://www.dylucas.com/categories/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>实践</title>
+      <link>https://www.dylucas.com/categories/%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Sat, 05 Sep 2020 00:13:09 +0800</pubDate>
+      
+      <guid>https://www.dylucas.com/categories/%E5%AE%9E%E8%B7%B5/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
