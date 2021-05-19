@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>平均负载 - 笔记记录</title>
+  <title>进制和位运算 - 笔记记录</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="dylucas" /><meta name="description" content="怎么理解“平均负载” 平均负载是指单位时间内，处于可运行状态和不可中断状态的进程数。所以，它不仅包括了正在使用 CPU 的进程，还包括等待 CPU 和等待 I/O 的" /><meta name="keywords" content="性能" />
+<meta name="author" content="dylucas" /><meta name="description" content="进制 四种进制 10 进制 decimal 简写：dec 16 进制 hexadecimal 简写：hex 8 进制 octonary 简写：oct 2 进制 binary 简写：bin 10 进制 十进制数由不以0开头的数字序列表示 1 2 3 4" /><meta name="keywords" content="进制, 位运算" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.79.1 with theme even" />
 
 
-<link rel="canonical" href="https://www.dylucas.com/2021/01/%E5%B9%B3%E5%9D%87%E8%B4%9F%E8%BD%BD/" />
+<link rel="canonical" href="https://www.dylucas.com/2018/05/%E8%BF%9B%E5%88%B6%E5%92%8C%E4%BD%8D%E8%BF%90%E7%AE%97/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,24 +39,24 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="平均负载" />
-<meta property="og:description" content="怎么理解“平均负载” 平均负载是指单位时间内，处于可运行状态和不可中断状态的进程数。所以，它不仅包括了正在使用 CPU 的进程，还包括等待 CPU 和等待 I/O 的" />
+<meta property="og:title" content="进制和位运算" />
+<meta property="og:description" content="进制 四种进制 10 进制 decimal 简写：dec 16 进制 hexadecimal 简写：hex 8 进制 octonary 简写：oct 2 进制 binary 简写：bin 10 进制 十进制数由不以0开头的数字序列表示 1 2 3 4" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.dylucas.com/2021/01/%E5%B9%B3%E5%9D%87%E8%B4%9F%E8%BD%BD/" />
-<meta property="article:published_time" content="2021-01-04T00:09:39+08:00" />
-<meta property="article:modified_time" content="2021-01-04T00:09:39+08:00" />
-<meta itemprop="name" content="平均负载">
-<meta itemprop="description" content="怎么理解“平均负载” 平均负载是指单位时间内，处于可运行状态和不可中断状态的进程数。所以，它不仅包括了正在使用 CPU 的进程，还包括等待 CPU 和等待 I/O 的">
-<meta itemprop="datePublished" content="2021-01-04T00:09:39+08:00" />
-<meta itemprop="dateModified" content="2021-01-04T00:09:39+08:00" />
-<meta itemprop="wordCount" content="1418">
+<meta property="og:url" content="https://www.dylucas.com/2018/05/%E8%BF%9B%E5%88%B6%E5%92%8C%E4%BD%8D%E8%BF%90%E7%AE%97/" />
+<meta property="article:published_time" content="2018-05-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-05-18T00:00:00+00:00" />
+<meta itemprop="name" content="进制和位运算">
+<meta itemprop="description" content="进制 四种进制 10 进制 decimal 简写：dec 16 进制 hexadecimal 简写：hex 8 进制 octonary 简写：oct 2 进制 binary 简写：bin 10 进制 十进制数由不以0开头的数字序列表示 1 2 3 4">
+<meta itemprop="datePublished" content="2018-05-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-05-18T00:00:00+00:00" />
+<meta itemprop="wordCount" content="913">
 
 
 
-<meta itemprop="keywords" content="性能,极客," />
+<meta itemprop="keywords" content="进制,位运算," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="平均负载"/>
-<meta name="twitter:description" content="怎么理解“平均负载” 平均负载是指单位时间内，处于可运行状态和不可中断状态的进程数。所以，它不仅包括了正在使用 CPU 的进程，还包括等待 CPU 和等待 I/O 的"/>
+<meta name="twitter:title" content="进制和位运算"/>
+<meta name="twitter:description" content="进制 四种进制 10 进制 decimal 简写：dec 16 进制 hexadecimal 简写：hex 8 进制 octonary 简写：oct 2 进制 binary 简写：bin 10 进制 十进制数由不以0开头的数字序列表示 1 2 3 4"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -119,12 +119,12 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">平均负载</h1>
+      <h1 class="post-title">进制和位运算</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-01-04 </span>
+        <span class="post-time"> 2018-05-18 </span>
         <div class="post-category">
-            <a href="/categories/linux/"> Linux </a>
+            <a href="/categories/%E5%9F%BA%E7%A1%80/"> 基础 </a>
             </div>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -137,15 +137,22 @@
   <ul>
     <li>
       <ul>
-        <li>
+        <li><a href="#进制">进制</a>
           <ul>
-            <li><a href="#怎么理解平均负载">怎么理解“平均负载”</a></li>
-            <li><a href="#uptime">uptime</a></li>
-            <li><a href="#man-uptime">man uptime</a></li>
-            <li><a href="#watch">watch</a></li>
-            <li><a href="#mpstat">mpstat</a></li>
-            <li><a href="#pidstat">pidstat</a></li>
-            <li><a href="#小结">小结</a></li>
+            <li><a href="#四种进制">四种进制</a></li>
+            <li><a href="#10-进制">10 进制</a></li>
+            <li><a href="#16-进制满16进1">16 进制（满16进1）</a></li>
+            <li><a href="#8-进制满8进1">8 进制（满8进1）</a></li>
+            <li><a href="#2-进制满2进1">2 进制（满2进1）</a></li>
+            <li><a href="#进制转换">进制转换</a></li>
+          </ul>
+        </li>
+        <li><a href="#位运算">位运算</a>
+          <ul>
+            <li><a href="#-逻辑与">&amp; 逻辑与</a></li>
+            <li><a href="#-逻辑或">| 逻辑或</a></li>
+            <li><a href="#-逻辑异或">^ 逻辑异或</a></li>
+            <li><a href="#-逻辑反">~ 逻辑反</a></li>
           </ul>
         </li>
       </ul>
@@ -155,18 +162,42 @@
   </div>
 </div>
     <div class="post-content">
-      <h3 id="怎么理解平均负载">怎么理解“平均负载”</h3>
-<p>平均负载是指单位时间内，处于可运行状态和不可中断状态的进程数。所以，它不仅包括了正在使用 CPU 的进程，还包括等待 CPU 和等待 I/O 的进程。</p>
-<p>所谓可运行状态的进程:</p>
+      <h2 id="进制">进制</h2>
+<h3 id="四种进制">四种进制</h3>
+<p>10 进制 decimal 简写：dec
+16 进制 hexadecimal 简写：hex
+8 进制 octonary 简写：oct
+2 进制 binary 简写：bin</p>
+<h3 id="10-进制">10 进制</h3>
+<p>十进制数由不以0开头的数字序列表示</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">是指正在使用 CPU 或者正在等待 CPU 的进程，也就是我们常用 ps 命令看到的，处于 R 状态（Running 或 Runnable）的进程。
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">... 万位 千位 百位 十位 个位 （满10进1）
+     9    9   9   9   9
+echo 123; //从右到左 3个位，分别时以 1顶1，以1顶10，以1顶100
+echo 1*3 + 10*2 + 100*1;
 </code></pre></td></tr></table>
 </div>
-</div><p>不可中断状态的进程:</p>
+</div><h3 id="16-进制满16进1">16 进制（满16进1）</h3>
+<p>十六进制数是以<code>0x</code>开头，接着是数字（0 ～ 9）或字母（A ～ F）的序列。字母可以是大写或小写，通常是大写</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">echo 0x123; //从右到左 3 个位，分别是以 1顶1，以 1顶16， 以 1顶256（16的n次方）
+echo 0x1c; //12*1 + 1*16 = 28
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="8-进制满8进1">8 进制（满8进1）</h3>
+<p>八进制数是有一个前导0和一个从0～7的数字序列组成</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -174,31 +205,13 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">则是正处于内核态关键流程中的进程，并且这些流程是不可打断的，比如最常见的是等待硬件设备的 I/O 响应，也就是我们在 ps 命令中看到的 D 状态（Uninterruptible Sleep，也称为 Disk Sleep）的进程。
-比如，当一个进程向磁盘读写数据时，为了保证数据的一致性，在得到磁盘回复前，它是不能被其他进程或者中断打断的，这个时候的进程就处于不可中断状态。如果此时的进程被打断了，就容易出现磁盘数据与进程数据不一致的问题。
-所以，不可中断状态实际上是系统对进程和硬件设备的一种保护机制。
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">echo 0123; //从右到左 3 个位，分别是以 1顶1，以 1顶8，以 1顶64（8的n次方）
+echo 027; //1*7 + 2*8 = 23
+echo 028; //2  当出现不合法值，后面的值会忽略
 </code></pre></td></tr></table>
 </div>
-</div><p><strong>平均负载最理想的情况是等于CPU个数</strong><br>
-<strong>获取系统cpu个数</strong><br>
-可以通过 top 命令或者从文件 /proc/cpuinfo 中读取</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ grep &#39;model name&#39; /proc/cpuinfo | wc -l
-</code></pre></td></tr></table>
-</div>
-</div><p>当平均负载高于 CPU 数量 70% 的时候，你就应该分析排查负载高的问题了。一旦负载过高，就可能导致进程响应变慢，进而影响服务的正常功能。但 70% 这个数字并不是绝对的，最推荐的方法，还是把系统的平均负载监控起来，然后根据更多的历史数据，判断负载的变化趋势。当发现负载有明显升高趋势时，比如说负载翻倍了，你再去做分析和调查。</p>
-<p><strong>平均负载与CPU使用率</strong><br>
-CPU 使用率，是单位时间内 CPU 繁忙情况的统计，跟平均负载并不一定完全对应。比如：</p>
-<ul>
-<li>CPU 密集型进程，使用大量 CPU 会导致平均负载升高，此时这两者是一致的；</li>
-<li>I/O 密集型进程，等待 I/O 也会导致平均负载升高，但 CPU 使用率不一定很高；</li>
-<li>大量等待 CPU 的进程调度也会导致平均负载升高，此时的 CPU 使用率也会比较高。</li>
-</ul>
-<h3 id="uptime">uptime</h3>
+</div><h3 id="2-进制满2进1">2 进制（满2进1）</h3>
+<p>二进制数以<code>0b</code>开始，接着由一个数字（0 和 1）序列组成</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -206,57 +219,141 @@ CPU 使用率，是单位时间内 CPU 繁忙情况的统计，跟平均负载�
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">uptime命令能够打印系统总共运行了多长时间和系统的平均负载。
-uptime命令可以显示的信息显示依次为：
-现在时间、系统已经运行了多长时间、目前有多少登陆用户、系统在过去的1分钟、5分钟和15分钟内的平均负载。
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">//从右到左，分别以 1顶1，以 1顶2， 顶4， 顶8， 顶16 ..... （2的n次方）
+echo 0b0011; //1*1 + 1*2 = 3
+echo 0b01100; // 0*1 + 0*2 + 1*4 + 1*8 = 12 
 </code></pre></td></tr></table>
 </div>
-</div><p>示例：</p>
+</div><h3 id="进制转换">进制转换</h3>
+<p><strong>10 进制转换其他进制，除以该进制，直到除尽或除不尽即可</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ uptime
-02:34:03 up 2 days, 20:14,  1 user,  load average: 0.63, 0.83, 0.88
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">133 转 2 进制
+  ______
+2 | 133  余1
+  ______ 
+2 | 66   余0 
+  ______ 
+2 | 33   余1
+  ______ 
+2 | 16   余0  
+  ______ 
+2 | 8    余0
+  ______ 
+2 | 4    余0
+  ______ 
+2 | 2    余0
+  ______ 
+  | 1   
+
+0b10000101 // 1*1 + 0*2 + 1*4 + 0*8 + 0*16 + 0*32 + 0*64 + 1*128 = 133
+133 转 8  0205
+133 转 16 0x85
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="man-uptime">man uptime</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">man命令是Linux下的帮助指令，通过man指令可以查看Linux中的指令帮助、配置文件帮助和编程帮助等信息。
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="watch">watch</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">watch命令以周期性的方式执行给定的指令，指令输出以全屏方式显示。
-watch是一个非常实用的命令，基本所有的Linux发行版都带有这个小工具，如同名字一样，watch可以帮你监测一个命令的运行结果，省得你一遍遍的手动运行。
-</code></pre></td></tr></table>
-</div>
-</div><p>示例：</p>
+</div><h2 id="位运算">位运算</h2>
+<p>一个字节有8个位，我们将这8个位来进行运算，就叫位运算</p>
+<p>位运算 是针对字节上的位来进行运算</p>
+<p><strong>位运算符：</strong> &amp; | ^ ~ &raquo; &laquo;</p>
+<p>位上有 1/0，如果将 1/0 当真假来看，1是真 0是假</p>
+<h3 id="-逻辑与">&amp; 逻辑与</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># -d 参数表示高亮显示变化的区域
-$ watch -d uptime
-...,  load average: 1.00, 0.75, 0.39
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">5  0000 0101
+12  0000 1100
+&amp;-------------
+   0000 0100
+echo 5 &amp; 12; //4
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="mpstat">mpstat</h3>
-<p>查看 CPU 使用率的变化情况</p>
+</div><h3 id="-逻辑或">| 逻辑或</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">5  0000 0101
+12  0000 1100
+|-------------
+   0000 1101
+echo 5 | 12; //13
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="-逻辑异或">^ 逻辑异或</h3>
+<p>逻辑异或,两者不一样则为真 一样为假</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">5  0000 0101
+12  0000 1100
+^-------------
+   0000 1001
+echo 5 ^ 12; //9  
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="-逻辑反">~ 逻辑反</h3>
+<p>逻辑反，只能求一个字符，就是 1-&gt;0 ， 0-&gt;1</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">5  0000 0101
+~-------------
+   1111 1010
+echo ~5; //-6
+</code></pre></td></tr></table>
+</div>
+</div><p>PHP 的 int 型则是有符号的</p>
+<p>取决于8个位的 最左面的位(最高位) 是否为1</p>
+<p>如果为 1 则是 负数 -1~-128</p>
+<p>如果为 0 则是 整数 0~127</p>
+<p><strong>&laquo; &raquo; 位运算</strong></p>
+<p>&laquo; 按位左移 空位补0</p>
+<p>&gt;&gt; 按位右移 空位补0</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -266,40 +363,30 @@ $ watch -d uptime
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
+</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># -P ALL 表示监控所有CPU，后面数字5表示间隔5秒后输出一组数据
-$ mpstat -P ALL 5
-Linux 4.15.0 (ubuntu) 09/22/18 _x86_64_ (2 CPU)
-13:30:06     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
-13:30:11     all   50.05    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00   49.95
-13:30:11       0    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
-13:30:11       1  100.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">5  0000 0101
+&lt;&lt;------------
+   0000 1010
+echo 5&lt;&lt;1; //10
+5  0000 0101
+&gt;&gt;------------
+   0000 0010
+echo 5&gt;&gt;1; //2
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="pidstat">pidstat</h3>
-<p>查看那个进程导致了CPU使用率为 100%</p>
+</div><p><strong>2 进制，左移一位增大2倍</strong></p>
+<p>将一个数快速的增大8倍</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 间隔5秒后输出一组数据
-$ pidstat -u 5 1
-13:37:07      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
-13:37:12        0      2962  100.00    0.00    0.00    0.00  100.00     1  stress
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">echo 2&lt;&lt;3; //16
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="小结">小结</h3>
-<p>平均负载提供了一个快速查看系统整体性能的手段，反映了整体的负载情况。但只看平均负载本身，我们并不能直接发现，到底是哪里出现了瓶颈。所以，在理解平均负载时，也要注意：</p>
-<ul>
-<li>平均负载高有可能是 CPU 密集型进程导致的；</li>
-<li>平均负载高并不一定代表 CPU 使用率高，还有可能是 I/O 更繁忙了；</li>
-<li>当发现负载高的时候，你可以使用 mpstat、pidstat 等工具，辅助分析负载的来源。</li>
-</ul>
+</div><p>按位移动比乘法要快，计算机最后是存储2进制的，省了转换</p>
 
     </div>
 
@@ -311,7 +398,7 @@ $ pidstat -u 5 1
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2021-01-04
+        2018-05-18
         
     </span>
   </p>
@@ -323,16 +410,16 @@ $ pidstat -u 5 1
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/%E6%80%A7%E8%83%BD/">性能</a>
-          <a href="/tags/%E6%9E%81%E5%AE%A2/">极客</a>
+          <a href="/tags/%E8%BF%9B%E5%88%B6/">进制</a>
+          <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>
           </div>
       <nav class="post-nav">
-        
-        <a class="next" href="/2020/09/mysql%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E5%AE%9E%E8%B7%B5/">
-            <span class="next-text nav-default">MySQL读写分离实践</span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
+        <a class="prev" href="/2020/09/mysql%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E5%AE%9E%E8%B7%B5/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">MySQL读写分离实践</span>
+            <span class="prev-text nav-mobile">上一篇</span>
           </a>
+        
       </nav>
     </footer>
   </article>
@@ -342,8 +429,8 @@ $ pidstat -u 5 1
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2021-01-04 00:09:39 \u002b0800 CST',
-        title: '平均负载',
+        id: '2018-05-18 00:00:00 \u002b0000 UTC',
+        title: '进制和位运算',
         clientID: '949bbff5c77883b7c1dd',
         clientSecret: 'ec7431e204d8d8336c0dcf029ef8bd5dd50484a8',
         repo: 'dylucas.com',
