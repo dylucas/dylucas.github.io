@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>devops on 笔记记录</title>
+    <link>https://www.dylucas.com/categories/devops/</link>
+    <description>Recent content in devops on 笔记记录</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.dylucas.com/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>虚拟机安装CentOS</title>
+      <link>https://www.dylucas.com/2021/06/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85centos/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.dylucas.com/2021/06/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85centos/</guid>
+      <description>实践环境 系统：macOS 虚拟机：VMware Fusion 镜像：CentOS-7-x86_64-DVD-1908 流程步骤 拖入CentOS镜像 开始安装 选择</description>
+    </item>
+    
+    <item>
+      <title>Linux各发行版的区别和联系</title>
+      <link>https://www.dylucas.com/2021/05/linux%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB/</link>
+      <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.dylucas.com/2021/05/linux%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB/</guid>
+      <description>Linux发行版的主要三个分支 Debian Slackware Redhat Debian 以社区的方式运作 Ubuntu：基于Debian开发的开源Linux操作系统，主要针对桌面和服务器。 Linux M</description>
+    </item>
+    
+  </channel>
+</rss>
